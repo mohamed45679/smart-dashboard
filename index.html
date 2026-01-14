@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="لوحة تحكم احترافية تفاعلية - تصميم عصري مع رسوم متحركة">
+    <title>لوحة التحكم الذكية | Smart Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="bg-particles" id="particles"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+        <div class="bg-glow glow-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="3" />
+                        <path d="M12 20L18 26L28 14" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#00d9ff" />
+                                <stop offset="100%" stop-color="#8b5cf6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">نيكسوس</span>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                    </svg>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="#" class="nav-item" data-section="analytics">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 20V10M12 20V4M6 20v-6" />
+                    </svg>
+                    <span>التحليلات</span>
+                </a>
+                <a href="#" class="nav-item" data-section="projects">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
+                    </svg>
+                    <span>المشاريع</span>
+                </a>
+                <a href="#" class="nav-item" data-section="wallet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" />
+                        <path d="M1 10h22" />
+                    </svg>
+                    <span>المحفظة</span>
+                </a>
+                <a href="#" class="nav-item" data-section="settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+                    </svg>
+                    <span>الإعدادات</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User Avatar">
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">أحمد محمد</span>
+                        <span class="user-role">مدير النظام</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-right">
+                    <button class="menu-toggle" id="menuToggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18" />
+                        </svg>
+                    </button>
+                    <div class="search-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                        <input type="text" placeholder="ابحث عن أي شيء..." id="searchInput">
+                    </div>
+                </div>
+                <div class="header-left">
+                    <button class="icon-btn notification-btn" id="notificationBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
+                        </svg>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <button class="icon-btn theme-toggle" id="themeToggle">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <div class="welcome-text">
+                        <h1>مرحباً، أحمد! 👋</h1>
+                        <p>إليك نظرة عامة على أدائك اليوم</p>
+                    </div>
+                    <div class="date-display">
+                        <span class="current-date" id="currentDate"></span>
+                        <span class="current-time" id="currentTime"></span>
+                    </div>
+                </section>
+
+                <!-- Stats Cards -->
+                <section class="stats-section">
+                    <div class="stat-card card-gradient-1">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">إجمالي الإيرادات</span>
+                            <span class="stat-value" id="revenueValue">$0</span>
+                            <span class="stat-change positive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 15l-6-6-6 6" />
+                                </svg>
+                                +12.5%
+                            </span>
+                        </div>
+                        <div class="stat-chart">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-gradient-2">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">المستخدمين النشطين</span>
+                            <span class="stat-value" id="usersValue">0</span>
+                            <span class="stat-change positive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 15l-6-6-6 6" />
+                                </svg>
+                                +8.2%
+                            </span>
+                        </div>
+                        <div class="stat-chart">
+                            <canvas id="usersChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-gradient-3">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">المشاريع المكتملة</span>
+                            <span class="stat-value" id="projectsValue">0</span>
+                            <span class="stat-change positive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 15l-6-6-6 6" />
+                                </svg>
+                                +23.1%
+                            </span>
+                        </div>
+                        <div class="stat-chart">
+                            <canvas id="projectsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-gradient-4">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">معدل التحويل</span>
+                            <span class="stat-value" id="conversionValue">0%</span>
+                            <span class="stat-change negative">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                                -2.4%
+                            </span>
+                        </div>
+                        <div class="stat-chart">
+                            <canvas id="conversionChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Charts Section -->
+                <section class="charts-section">
+                    <div class="chart-card main-chart">
+                        <div class="chart-header">
+                            <h3>نظرة عامة على الأداء</h3>
+                            <div class="chart-filters">
+                                <button class="filter-btn active" data-period="week">أسبوع</button>
+                                <button class="filter-btn" data-period="month">شهر</button>
+                                <button class="filter-btn" data-period="year">سنة</button>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="mainChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-card side-chart">
+                        <div class="chart-header">
+                            <h3>توزيع المبيعات</h3>
+                        </div>
+                        <div class="chart-body doughnut-container">
+                            <canvas id="doughnutChart"></canvas>
+                            <div class="doughnut-center">
+                                <span class="doughnut-value" id="totalSales">$0</span>
+                                <span class="doughnut-label">إجمالي</span>
+                            </div>
+                        </div>
+                        <div class="chart-legend" id="chartLegend"></div>
+                    </div>
+                </section>
+
+                <!-- Activity & Tasks Section -->
+                <section class="bottom-section">
+                    <!-- Recent Activity -->
+                    <div class="activity-card">
+                        <div class="card-header">
+                            <h3>النشاطات الأخيرة</h3>
+                            <button class="see-all-btn">عرض الكل</button>
+                        </div>
+                        <div class="activity-list" id="activityList">
+                            <!-- Activities will be added by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Tasks -->
+                    <div class="tasks-card">
+                        <div class="card-header">
+                            <h3>المهام القادمة</h3>
+                            <button class="add-task-btn" id="addTaskBtn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 5v14M5 12h14" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="tasks-list" id="tasksList">
+                            <!-- Tasks will be added by JS -->
+                        </div>
+                        <div class="task-progress">
+                            <div class="progress-info">
+                                <span>تقدم اليوم</span>
+                                <span id="progressPercent">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions-card">
+                        <div class="card-header">
+                            <h3>إجراءات سريعة</h3>
+                        </div>
+                        <div class="quick-actions-grid">
+                            <button class="quick-action" data-action="report">
+                                <div class="action-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                                    </svg>
+                                </div>
+                                <span>تقرير جديد</span>
+                            </button>
+                            <button class="quick-action" data-action="invoice">
+                                <div class="action-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" />
+                                        <path d="M1 10h22" />
+                                    </svg>
+                                </div>
+                                <span>إنشاء فاتورة</span>
+                            </button>
+                            <button class="quick-action" data-action="message">
+                                <div class="action-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                                    </svg>
+                                </div>
+                                <span>رسالة جديدة</span>
+                            </button>
+                            <button class="quick-action" data-action="export">
+                                <div class="action-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                                    </svg>
+                                </div>
+                                <span>تصدير البيانات</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="panel-header">
+            <h3>الإشعارات</h3>
+            <button class="close-panel" id="closePanel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="notifications-list" id="notificationsList">
+            <!-- Notifications will be added by JS -->
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Task Modal -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إضافة مهمة جديدة</h3>
+                <button class="close-modal" id="closeModal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="taskTitle">عنوان المهمة</label>
+                    <input type="text" id="taskTitle" placeholder="أدخل عنوان المهمة...">
+                </div>
+                <div class="form-group">
+                    <label for="taskPriority">الأولوية</label>
+                    <select id="taskPriority">
+                        <option value="low">منخفضة</option>
+                        <option value="medium" selected>متوسطة</option>
+                        <option value="high">عالية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="taskDate">تاريخ الاستحقاق</label>
+                    <input type="date" id="taskDate">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelTask">إلغاء</button>
+                <button class="btn btn-primary" id="saveTask">حفظ المهمة</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="api-service.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
